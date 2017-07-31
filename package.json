@@ -1,0 +1,38 @@
+{
+  "name": "api-node-with-typescript",
+  "version": "1.0.0",
+  "description": "Node api using typescript",
+  "main": "server/server.ts",
+  "scripts": {
+    "start": "./node_modules/.bin/ts-node ./server/server.ts",
+    "builder": "node ./build/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CarlosJSL/Api-Node-with-Typescript.git"
+  },
+  "author": "Carlos Jose",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CarlosJSL/Api-Node-with-Typescript/issues"
+  },
+  "homepage": "https://github.com/CarlosJSL/Api-Node-with-Typescript#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "http": "0.0.0",
+    "morgan": "^1.8.2",
+    "pg": "^7.0.2",
+    "sequelize": "^4.4.2",
+    "sequelize-cli": "^2.7.0"
+  },
+  "devDependencies": {
+    "@types/body-parser": "^1.16.4",
+    "@types/express": "^4.0.36",
+    "@types/morgan": "^1.7.32",
+    "@types/sequelize": "^4.0.67",
+    "sequelize": "^4.4.2",
+    "ts-node": "^3.3.0"
+  }
+}
