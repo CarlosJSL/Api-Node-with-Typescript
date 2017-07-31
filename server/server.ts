@@ -1,5 +1,12 @@
 import * as http from 'http';
+import Api from './api/api';
 
+const config = require('./config/env/config')();
 
 const server = http.createServer();
-server.listen(3000,() => console.log('Server está rodando na porta 3000'));
+
+
+server.listen(config.serverPort);
+
+server.on('listening', () => console.log(`Servidor está rodando na porta ${config.serverPort}`));
+server.on('error', (error: NodeJS.ErrnoException) => console.log(`Ocorreu um erro: ${error}`));
