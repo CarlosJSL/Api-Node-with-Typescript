@@ -7,7 +7,7 @@ describe('Integration tests ', function () {
             helpers_1.request(helpers_1.app)
                 .get('api/users/all')
                 .end(function (error, res) {
-                helpers_1.expect(res.statusCode).to.equal(200);
+                helpers_1.expect(res.status).to.equal(200);
             });
         });
     });
@@ -16,7 +16,7 @@ describe('Integration tests ', function () {
             helpers_1.request(helpers_1.app)
                 .get("api/users/" + 1)
                 .end(function (error, res) {
-                helpers_1.expect(res.statusCode).to.equal(200);
+                helpers_1.expect(res.status).to.equal(200);
             });
         });
     });
@@ -29,7 +29,7 @@ describe('Integration tests ', function () {
                 .post("api/users/new")
                 .send(user)
                 .end(function (error, res) {
-                helpers_1.expect(res.statusCode).to.equal(200);
+                helpers_1.expect(res.status).to.equal(200);
             });
         });
     });
@@ -43,7 +43,7 @@ describe('Integration tests ', function () {
                 .post("api/users/" + 1 + "/edit")
                 .send(user)
                 .end(function (error, res) {
-                helpers_1.expect(res.statusCode).to.equal(200);
+                helpers_1.expect(res.status).to.equal(200);
             });
         });
     });
@@ -56,7 +56,7 @@ describe('Integration tests ', function () {
                 .delete("api/users/" + 1)
                 .send(user)
                 .end(function (error, res) {
-                helpers_1.expect(res.statusCode).to.equal(204);
+                helpers_1.expect(res.status).to.equal(204);
             });
         });
     });
